@@ -1,7 +1,7 @@
 version: 0.0.1
 type: plugin
-author: "7nohe"
-name: "dify-plugin-backlog"
+author: 7nohe
+name: backlog
 label:
   en_US: "Backlog (Nulab) Tools"
   ja_JP: "Backlog連携ツール"
