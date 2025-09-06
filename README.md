@@ -1,4 +1,4 @@
-#+ dify-backlog (Dify Plugin for Backlog)
+# dify-plugin-backlog (Dify Plugin for Backlog)
 
 Backlog (Nulab) の API を、Dify v1 の「ツール型」プラグインとして利用できるようにするパッケージです。API Key 認証で、プロジェクト/課題の取得、課題の作成、コメント追加を行います。
 
