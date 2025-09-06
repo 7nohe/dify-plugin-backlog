@@ -1,0 +1,18 @@
+identity:
+  author: "7nohe"
+  name: "list_priorities"
+  label:
+    en_US: "List Priorities"
+    ja_JP: "優先度一覧取得"
+
+description:
+  human:
+    en_US: "Fetch Backlog priorities."
+    ja_JP: "Backlogの優先度一覧を取得します。"
+  llm: "List Backlog priorities."
+
+parameters: []
+
+extra:
+  python:
+    source: "tools/list_priorities.py"

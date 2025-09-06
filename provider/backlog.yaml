@@ -1,60 +1,55 @@
 identity:
-  author: "daikiurata"
+  author: "7nohe"
   name: "backlog"
   label:
-    en_US: "backlog"
-    zh_Hans: "backlog"
-    pt_BR: "backlog"
+    en_US: "Backlog Provider"
+    ja_JP: "Backlog プロバイダ"
   description:
-    en_US: "Backlog (Nulab) Tools"
-    zh_Hans: "Backlog (Nulab) Tools"
-    pt_BR: "Backlog (Nulab) Tools"
+    en_US: "Authenticate to Backlog and expose tools to operate projects and issues."
+    ja_JP: "Backlog に認証し、プロジェクト/課題操作のツールを提供します。"
   icon: "icon.svg"
 
-#########################################################################################
-# If you want to support OAuth, you can uncomment the following code.
-#########################################################################################
-# oauth_schema:
-#   client_schema:
-#     - name: "client_id"
-#       type: "secret-input"
-#       required: true
-#       url: https://example.com/oauth/authorize
-#       placeholder:
-#         en_US: "Please input your Client ID"
-#         zh_Hans: "请输入你的 Client ID"
-#         pt_BR: "Insira seu Client ID"
-#       help:
-#         en_US: "Client ID is used to authenticate requests to the example.com API."
-#         zh_Hans: "Client ID 用于认证请求到 example.com API。"
-#         pt_BR: "Client ID é usado para autenticar solicitações à API do example.com."
-#       label:
-#         zh_Hans: "Client ID"
-#         en_US: "Client ID"
-#     - name: "client_secret"
-#       type: "secret-input"
-#       required: true
-#       url: https://example.com/oauth/authorize
-#       placeholder:
-#         en_US: "Please input your Client Secret"
-#         zh_Hans: "请输入你的 Client Secret"
-#         pt_BR: "Insira seu Client Secret"
-#       help:
-#         en_US: "Client Secret is used to authenticate requests to the example.com API."
-#         zh_Hans: "Client Secret 用于认证请求到 example.com API。"
-#         pt_BR: "Client Secret é usado para autenticar solicitações à API do example.com."
-#       label:
-#         zh_Hans: "Client Secret"
-#         en_US: "Client Secret"
-#   credentials_schema:
-#     - name: "access_token"
-#       type: "secret-input"
-#       label:
-#         zh_Hans: "Access Token"
-#         en_US: "Access Token"
+credentials_for_provider:
+  SPACE_DOMAIN:
+    type: text-input
+    required: true
+    label:
+      en_US: "Space Domain"
+      ja_JP: "スペースドメイン"
+    placeholder:
+      en_US: "yourspace.backlog.jp"
+      ja_JP: "yourspace.backlog.jp"
+    help:
+      en_US: "Without scheme, e.g. yourspace.backlog.jp"
+      ja_JP: "スキーム(https://)なしで入力してください"
+  API_KEY:
+    type: secret-input
+    required: true
+    label:
+      en_US: "API Key"
+      ja_JP: "APIキー"
+    help:
+      en_US: "Backlog Personal Settings → API"
+      ja_JP: "Backlog個人設定→APIで発行したキー"
+  DEFAULT_PROJECT:
+    type: text-input
+    required: false
+    label:
+      en_US: "Default Project (ID or Key)"
+      ja_JP: "デフォルトのプロジェクト（IDまたはキー）"
+    help:
+      en_US: "Optional. Used when a tool receives no project parameter."
+      ja_JP: "任意。ツール入力にプロジェクトが渡らない場合に使用します。"
 
 tools:
-  - tools/backlog.yaml
+  - "tools/list_projects.yaml"
+  - "tools/list_issues.yaml"
+  - "tools/get_issue.yaml"
+  - "tools/create_issue.yaml"
+  - "tools/add_comment.yaml"
+  - "tools/list_priorities.yaml"
+  - "tools/list_issue_types.yaml"
+
 extra:
   python:
-    source: provider/backlog.py
+    source: "provider/backlog.py"

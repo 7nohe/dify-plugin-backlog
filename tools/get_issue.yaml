@@ -1,0 +1,28 @@
+identity:
+  author: "7nohe"
+  name: "get_issue"
+  label:
+    en_US: "Get Issue"
+    ja_JP: "課題情報取得"
+
+description:
+  human:
+    en_US: "Fetch a Backlog issue by ID or key."
+    ja_JP: "課題IDまたはキーからBacklogの課題情報を取得します。"
+  llm: "Get Backlog issue details by id or key."
+
+parameters:
+  - name: issueIdOrKey
+    label:
+      en_US: "Issue ID or Key"
+      ja_JP: "課題IDまたはキー"
+    human_description:
+      en_US: "Numeric ID or key like PRJ-123."
+      ja_JP: "数値IDまたは PRJ-123 のようなキーを指定。"
+    type: string
+    form: llm
+    required: true
+
+extra:
+  python:
+    source: "tools/get_issue.py"

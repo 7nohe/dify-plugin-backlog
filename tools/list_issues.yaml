@@ -1,0 +1,68 @@
+identity:
+  author: "7nohe"
+  name: "list_issues"
+  label:
+    en_US: "List Issues"
+    ja_JP: "課題一覧取得"
+
+description:
+  human:
+    en_US: "Fetch Backlog issues with paging."
+    ja_JP: "Backlogの課題一覧をページングで取得します。"
+  llm: "List Backlog issues by filters, handling paging by count/offset."
+
+parameters:
+  - name: projectId
+    label:
+      en_US: "Project IDs"
+      ja_JP: "プロジェクトID"
+    human_description:
+      en_US: "Comma-separated or JSON array (e.g. 1,2,3 or [1,2])."
+      ja_JP: "カンマ区切り または JSON配列（例: 1,2,3 または [1,2]）。"
+    type: string
+    form: schema
+    required: false
+  - name: assigneeId
+    label:
+      en_US: "Assignee IDs"
+      ja_JP: "担当者ID"
+    human_description:
+      en_US: "Comma-separated or JSON array (e.g. 101,102 or [101,102])."
+      ja_JP: "カンマ区切り または JSON配列（例: 101,102 または [101,102]）。"
+    type: string
+    form: schema
+    required: false
+  - name: statusId
+    label:
+      en_US: "Status IDs"
+      ja_JP: "ステータスID"
+    human_description:
+      en_US: "Comma-separated or JSON array (e.g. 1,2 or [1,2])."
+      ja_JP: "カンマ区切り または JSON配列（例: 1,2 または [1,2]）。"
+    type: string
+    form: schema
+    required: false
+  - name: keyword
+    label:
+      en_US: "Keyword"
+      ja_JP: "キーワード"
+    human_description:
+      en_US: "Keyword to search in issues."
+      ja_JP: "課題の検索キーワード。"
+    type: string
+    form: schema
+    required: false
+  - name: count
+    label:
+      en_US: "Count"
+      ja_JP: "取得件数"
+    human_description:
+      en_US: "1-100 (default 100)."
+      ja_JP: "1〜100（既定100）。"
+    type: number
+    form: schema
+    required: false
+
+extra:
+  python:
+    source: "tools/list_issues.py"

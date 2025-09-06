@@ -1,0 +1,28 @@
+identity:
+  author: "7nohe"
+  name: "list_issue_types"
+  label:
+    en_US: "List Issue Types"
+    ja_JP: "課題種別一覧取得"
+
+description:
+  human:
+    en_US: "Fetch Backlog issue types for a project."
+    ja_JP: "指定プロジェクトの課題種別一覧を取得します。"
+  llm: "List Backlog issue types for given project."
+
+parameters:
+  - name: projectIdOrKey
+    label:
+      en_US: "Project ID or Key"
+      ja_JP: "プロジェクトIDまたはキー"
+    human_description:
+      en_US: "Numeric ID or project key (e.g. PRJ)."
+      ja_JP: "数値ID または プロジェクトキー（例: PRJ）。"
+    type: string
+    form: llm
+    required: true
+
+extra:
+  python:
+    source: "tools/list_issue_types.py"

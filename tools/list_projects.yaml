@@ -1,0 +1,38 @@
+identity:
+  author: "7nohe"
+  name: "list_projects"
+  label:
+    en_US: "List Projects"
+    ja_JP: "プロジェクト一覧取得"
+
+description:
+  human:
+    en_US: "Fetch Backlog projects."
+    ja_JP: "Backlogのプロジェクト一覧を取得します。"
+  llm: "List Backlog projects."
+
+parameters:
+  - name: archived
+    label:
+      en_US: "Archived"
+      ja_JP: "アーカイブ含む"
+    human_description:
+      en_US: "Include archived projects if true."
+      ja_JP: "true の場合はアーカイブ済みを含めます。"
+    type: boolean
+    form: schema
+    required: false
+  - name: all
+    label:
+      en_US: "All projects (admin)"
+      ja_JP: "全プロジェクト（管理者）"
+    human_description:
+      en_US: "Admin only. Return all projects if true."
+      ja_JP: "管理者のみ有効。true で全プロジェクトを返します。"
+    type: boolean
+    form: schema
+    required: false
+
+extra:
+  python:
+    source: "tools/list_projects.py"

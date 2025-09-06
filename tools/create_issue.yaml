@@ -1,0 +1,88 @@
+identity:
+  author: "7nohe"
+  name: "create_issue"
+  label:
+    en_US: "Create Issue"
+    ja_JP: "課題作成"
+
+description:
+  human:
+    en_US: "Create a Backlog issue."
+    ja_JP: "Backlogの課題を作成します。"
+  llm: "Create a Backlog issue with provided fields."
+
+parameters:
+  - name: projectId
+    label:
+      en_US: "Project ID"
+      ja_JP: "プロジェクトID"
+    human_description:
+      en_US: "Numeric project ID."
+      ja_JP: "数値のプロジェクトID。"
+    type: string
+    form: llm
+    required: true
+  - name: summary
+    label:
+      en_US: "Summary"
+      ja_JP: "件名"
+    human_description:
+      en_US: "Issue summary/title."
+      ja_JP: "課題の件名。"
+    type: string
+    form: llm
+    required: true
+  - name: description
+    label:
+      en_US: "Description"
+      ja_JP: "説明"
+    human_description:
+      en_US: "Issue description (optional)."
+      ja_JP: "課題の説明（任意）。"
+    type: string
+    form: llm
+    required: false
+  - name: issueTypeId
+    label:
+      en_US: "Issue Type ID"
+      ja_JP: "課題タイプID"
+    human_description:
+      en_US: "Backlog issue type ID."
+      ja_JP: "Backlogの課題タイプID。"
+    type: string
+    form: llm
+    required: true
+  - name: priorityId
+    label:
+      en_US: "Priority ID"
+      ja_JP: "優先度ID"
+    human_description:
+      en_US: "Backlog priority ID."
+      ja_JP: "Backlogの優先度ID。"
+    type: string
+    form: llm
+    required: true
+  - name: assigneeId
+    label:
+      en_US: "Assignee ID"
+      ja_JP: "担当者ID"
+    human_description:
+      en_US: "Assign to this user ID (optional)."
+      ja_JP: "このユーザーIDにアサイン（任意）。"
+    type: string
+    form: llm
+    required: false
+  - name: dueDate
+    label:
+      en_US: "Due Date"
+      ja_JP: "期限"
+    human_description:
+      en_US: "YYYY-MM-DD"
+      ja_JP: "YYYY-MM-DD"
+    type: string
+    form: llm
+    required: false
+
+extra:
+  python:
+    source: "tools/create_issue.py"
