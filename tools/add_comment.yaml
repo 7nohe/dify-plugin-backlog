@@ -20,7 +20,7 @@ parameters:
       en_US: "Issue numeric ID or key like PRJ-123."
       ja_JP: "数値IDまたは PRJ-123 などのキー。"
     type: string
-    form: schema
+    form: llm
     required: true
   - name: content
     label:
@@ -30,7 +30,7 @@ parameters:
       en_US: "Comment content."
       ja_JP: "コメント本文。"
     type: string
-    form: schema
+    form: llm
     required: true
 
 extra:

@@ -20,7 +20,7 @@ parameters:
       en_US: "Comma-separated or JSON array (e.g. 1,2,3 or [1,2])."
       ja_JP: "カンマ区切り または JSON配列（例: 1,2,3 または [1,2]）。"
     type: string
-    form: schema
+    form: llm
     required: false
   - name: assigneeId
     label:
@@ -30,7 +30,7 @@ parameters:
       en_US: "Comma-separated or JSON array (e.g. 101,102 or [101,102])."
       ja_JP: "カンマ区切り または JSON配列（例: 101,102 または [101,102]）。"
     type: string
-    form: schema
+    form: llm
     required: false
   - name: statusId
     label:
@@ -40,7 +40,7 @@ parameters:
       en_US: "Comma-separated or JSON array (e.g. 1,2 or [1,2])."
       ja_JP: "カンマ区切り または JSON配列（例: 1,2 または [1,2]）。"
     type: string
-    form: schema
+    form: llm
     required: false
   - name: keyword
     label:
@@ -50,7 +50,7 @@ parameters:
       en_US: "Keyword to search in issues."
       ja_JP: "課題の検索キーワード。"
     type: string
-    form: schema
+    form: llm
     required: false
   - name: count
     label:
@@ -60,7 +60,7 @@ parameters:
       en_US: "1-100 (default 100)."
       ja_JP: "1〜100（既定100）。"
     type: number
-    form: schema
+    form: llm
     required: false
 
 extra:
