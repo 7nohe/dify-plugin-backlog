@@ -162,6 +162,7 @@ make test
 - Create Issue 実行後に `https://{SPACE_DOMAIN}/view/{ISSUE_KEY}` を返す
 
 ### 変更履歴 / Changelog
+- 0.0.2: Dify Plugin SDKバージョン更新
 - 0.0.1: 初版
 
 ### ライセンス / License
@@ -336,6 +337,7 @@ make test
 - Create Issue returns `https://{SPACE_DOMAIN}/view/{ISSUE_KEY}`.
 
 ### Changelog
+- 0.0.2: Updated Dify Plugin SDK version
 - 0.0.1: Initial release.
 
 ### License
