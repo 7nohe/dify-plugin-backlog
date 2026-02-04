@@ -1,4 +1,4 @@
-version: 0.0.2
+version: 0.0.3
 type: plugin
 author: 7nohe
 name: backlog
@@ -23,7 +23,7 @@ plugins:
     - "provider/backlog.yaml"
 
 meta:
-  version: 0.0.2
+  version: 0.0.3
   arch: ["amd64", "arm64"]
   runner:
     language: "python"

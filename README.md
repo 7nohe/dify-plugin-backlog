@@ -163,6 +163,7 @@ make test
 - Create Issue returns `https://{SPACE_DOMAIN}/view/{ISSUE_KEY}`
 
 ## Changelog
+- 0.0.3: Update Dify Plugin SDK version (dify_plugin 0.7.1 range)
 - 0.0.2: Update Dify Plugin SDK version
 - 0.0.1: Initial release
 
